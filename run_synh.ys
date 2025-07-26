@@ -1,0 +1,33 @@
+ read_verilog booth_multiplier.v
+
+# elaborate design hierarchy 
+hierarchy -top booth_multiplier
+
+# the high-level stuff
+
+ proc; opt; fsm; opt; memory; opt
+
+ # mapping to internal cell library
+
+ techmap; opt
+
+ # mapping flip-flops to mycells.lib
+
+ dfflibmap -liberty /home/faiz/vsdflow/library/osu018_stdcells.lib
+
+#show
+
+ # mapping logic to mycells.lib
+
+ abc -liberty /home/faiz/vsdflow/library/osu018_stdcells.lib
+
+# cleanup
+ clean
+
+#graphical/pictorial representation of module
+
+ show
+
+# write synthesized design
+
+write_verilog booth_multiplier_synth.v
