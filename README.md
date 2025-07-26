@@ -1,4 +1,3 @@
-
 # 🧮 Booth Multiplier – RTL Design Using Verilog
 
 This project demonstrates the RTL implementation of a **4-bit Booth Multiplier** using Verilog HDL. Booth’s algorithm allows efficient multiplication of signed binary numbers. The design includes a testbench, waveform generation, and simulation using open-source tools like Icarus Verilog and GTKWave.
@@ -34,6 +33,10 @@ Ensure you have **Icarus Verilog** and **GTKWave** installed.
    ├── booth_multiplier_tb.v             # Testbench with stimulus
    ├── booth.vcd              # Generated waveform file
    ├── README.md              # Project documentation
+ 3. **Yosys Synthesis:**
+    ```bash
+       yosys
+       yosys>> script run_synh.ys
 ## ✅ Output & Features
 ✔️ Sample Testbench Output
      
@@ -46,7 +49,7 @@ Ensure you have **Icarus Verilog** and **GTKWave** installed.
     Signed multiplication with Booth’s algorithm
 
     Start and reset control signals
- 
+
     Waveform generation with $dumpvars
 
     Verilog testbench included
